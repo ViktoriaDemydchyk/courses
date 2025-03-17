@@ -1,0 +1,413 @@
+body {
+    font-family: Georgia, serif; /* Новий стильний шрифт */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f1aeddad, #f3edf1ae); /* Плавний перехід кольорів */
+    color: rgb(1, 0, 0);
+}
+
+
+
+/* Стилі для заголовка */
+h1 {
+    color: #040004ef; /* Яскравий колір заголовка */
+    text-align: center;
+    font-size: 3em; /* Збільшений розмір */
+    text-shadow: 3px 3px 6px rgba(239, 198, 230, 0.604); /* Темна обводка */
+    font-weight: 700; /* Робимо текст жирним */
+    margin-bottom: 20px;
+    
+}
+/* Стилі для тексту під заголовком */
+p {
+    font-size: 1.4em; /* Збільшений текст */
+    color: #333; /* Темніший колір для кращої читабельності */
+    text-align: center; /* Вирівнюємо по центру */
+    line-height: 1.2; /* Збільшуємо міжрядковий інтервал */
+    max-width: 800px; /* Обмежуємо ширину тексту */
+    margin: 0 auto 20px; /* Вирівнюємо по центру */
+}
+/* Стилі для навігації */
+header {
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: flex-start; /* Вирівнюємо меню ліворуч */
+    align-items: center;
+    padding-left: 20px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    display: inline;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+
+
+.nav-menu a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+
+
+
+/* Основний контент */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.home-content {
+    display: flex;
+    align-items: stretch; /* Вирівнює всі елементи по висоті */
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 100px auto 20px;
+    padding: 20px;
+}
+
+.welcome-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Вирівнює текст всередині */
+    flex: 1; /* Дозволяє займати однакову висоту */
+}
+
+.home-content img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Обрізає картинку, щоб вона не розтягувалася */
+    flex: 1; /* Дозволяє займати однакову висоту */
+}
+
+.welcome-box h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.welcome-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.highlights {
+    background: #fff0f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.highlights h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.highlights ul {
+    list-style-type: none; /* Прибирає стандартні маркери списку */
+    padding-left: 0; /* Прибирає відступ зліва */
+}
+
+.highlights ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.cta {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+
+
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.course {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(250, 84, 211, 0.756);
+}
+
+.course h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.course-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.course img {
+    width: 80%;
+    max-width: 180px;
+    border-radius: 8px;
+}
+
+.course-info {
+    font-size: 0.85em;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.course-info p {
+    margin: 5px 0;
+}
+
+/* Основний контейнер для таблиці */
+.schedule-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.schedule-title {
+    text-align: center;
+    font-size: 2.2em;
+        font-weight: bold;
+    color: black !important; /* Примусово чорний колір */
+    margin-bottom: 30px;
+}
+
+
+
+/* Стилі для таблиці */
+.schedule-table {
+    width: 95%;
+    max-width: 1400px;
+    height: 90vh; /* Займає майже всю сторінку */
+    border-collapse: collapse;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+.schedule-table th, .schedule-table td {
+    padding: 20px;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    color: black;
+}
+
+
+/* Стилі для заголовків */
+.schedule-table th {
+    background: linear-gradient(to right, #f779ed, #ffa5f4); /* Градієнт */
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 18px;
+    text-transform: uppercase;
+}
+
+/* Стилі для комірок */
+.schedule-table td {
+    font-size: 18px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    color: #333;
+    font-weight: 500;
+}
+
+
+/* Підсвічування рядка при наведенні */
+.schedule-table tbody tr:hover {
+    background-color: #fcdbfb; /* Ніжний рожевий фон */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Чередування кольорів рядків */
+.schedule-table tbody tr:nth-child(even) {
+    background: #fdf5ff;
+}
+
+/* Стиль для першого стовпця (дата) */
+.schedule-table td:first-child {
+    font-weight: bold;
+    color: #ef50da;
+}
+
+/* Стиль для останнього стовпця (викладач) */
+.schedule-table td:last-child {
+    font-style: italic;
+    color: #555;
+}
+
+
+.schedule-table td {
+    font-size: 16px;
+}
+
+.schedule-table tr:nth-child(even) {
+    background: #ffffff;
+}
+
+
+/* Стиль для основного контенту */
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 100px auto 20px; /* Враховуємо фіксоване меню */
+    padding: 20px;
+}
+
+.home-content img {
+    max-width: 50%; /* Картинка займає половину ширини */
+    height: auto;
+    border-radius: 10px;
+}
+
+.text {
+    max-width: 50%;
+}
+
+.profile-container {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+}
+
+.profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.list li {
+    padding: 10px 0;
+    font-size: 1.2em;
+}
+
+.certificate {
+    color: green;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+    height: 12px;
+}
+
+.progress {
+    height: 100%;
+    background: #007bff;
+    border-radius: 10px;
+}
+
+.profile-section a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.profile-section a:hover {
+    text-decoration: underline;
+}
+
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
